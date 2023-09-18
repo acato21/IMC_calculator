@@ -5,8 +5,6 @@ const form = document.querySelector('form')
 const heigth = document.querySelector('#heigth')
 const weigth = document.querySelector('#weigth')
 
-var cont = Boolean
-
 form.onsubmit = (event) => {
     event.preventDefault()
 
