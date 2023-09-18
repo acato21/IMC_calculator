@@ -3,14 +3,18 @@ export const error = {
     error_wrapper: document.querySelector('.error_wrapper'),
 
     open() {
-        error.error_wrapper.classList.add('open')
-        setTimeout(() => {
-            
-            if(cont){
-                error.close()
-            }
 
-        }, 5000);
+        if(cont){
+
+            error.error_wrapper.classList.add('open')
+
+            setTimeout(() => {
+                
+                    error.close()
+
+            }, 5000);
+
+        };
     },
 
     close(){
@@ -20,7 +24,7 @@ export const error = {
         setTimeout(() => {
 
             error.error_wrapper.classList.remove('close')
-            cont = false
+            cont = true
 
         }, 500);
     },
@@ -32,8 +36,8 @@ export const error = {
 
             error.open()
     
-            if(isNumber(heigth.value)){
-                heigth.classList.add('incorret')
+            if(isNumber(heigth.value)){                 
+                heigth.classList.add('incorret')                                                                          
             }
         
             if(isNumber(weigth.value)){
@@ -49,3 +53,5 @@ export const error = {
 function isNumber(value){
     return value === "" || isNaN(value)
 }
+
+let cont = Boolean
