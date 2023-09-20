@@ -221,3 +221,14 @@ form button:hover{
 .hide{
     display: none;
 }
+
+@media (max-width: 700px){
+    .card{
+        max-width: 42.8rem;
+        margin: 1.6rem;
+    }
+
+    form{
+        width: 100%;
+    }
+}
